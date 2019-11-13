@@ -154,7 +154,11 @@ department_list.append(("TRANSLATION AND INTERPRETING STUDIES", "TR"))
 department_list.append(("TURKISH COURSES COORDINATOR", "TK"))
 department_list.append(("TURKISH LANGUAGE & LITERATURE", "TKL"))
 department_list.append(("WESTERN LANGUAGES & LITERATURES", "LL"))
-
+'''
+department_list_sorted=[]
+for dep in department_list:
+    department_list_sorted.append((dep[1],dep[0]))
+'''
 #Manually adding all the url extensions
 url_list=[]
 url_list.append("&kisaadi=ASIA&bolum=ASIAN+STUDIES")
@@ -228,18 +232,17 @@ url_list.append("&kisaadi=TKL&bolum=TURKISH+LANGUAGE+%26+LITERATURE")
 url_list.append("&kisaadi=LL&bolum=WESTERN+LANGUAGES+%26+LITERATURES")
 my_dict = {}
 my_dict_instr = {}
-#List comprehension
-[(t[1], t[0]) for t in department_list]
-#Sort them at the same time
-department_list, url_list = (list(t) for t in zip(*sorted(zip(department_list, url_list))))
-#List comprehension
-[(t[1], t[0]) for t in department_list]
+
 #my_dict and my_dict_instr holds a set that contains all the distinct 
 #courses and instructors that a department opened throughout the given input semesters
 for dep in department_list:
     my_dict[dep]=set()
     my_dict_instr[dep]=set()
     
+starting_year = 2018
+starting_term = "Spring"
+finishing_year = 2018
+finishing_term = "Fall"
 
 #Starting index is calculated by simple calculations
 #This index will determine the range of semester    
