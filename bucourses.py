@@ -15,82 +15,8 @@ import sys
 #Manually adding all the departments
 department_list = open("/departments.txt")
 
-'''
-department_list_sorted=[]
-for dep in department_list:
-    department_list_sorted.append((dep[1],dep[0]))
-'''
-#Manually adding all the url extensions
 url_list=[]
-url_list.append("&kisaadi=ASIA&bolum=ASIAN+STUDIES")
-url_list.append("&kisaadi=ASIA&bolum=ASIAN+STUDIES+WITH+THESIS")
-url_list.append("&kisaadi=ATA&bolum=ATATURK+INSTITUTE+FOR+MODERN+TURKISH+HISTORY")
-url_list.append("&kisaadi=AUTO&bolum=AUTOMOTIVE+ENGINEERING")
-url_list.append("&kisaadi=BM&bolum=BIOMEDICAL+ENGINEERING")
-url_list.append("&kisaadi=BIS&bolum=BUSINESS+INFORMATION+SYSTEMS")
-url_list.append("&kisaadi=CHE&bolum=CHEMICAL+ENGINEERING")
-url_list.append("&kisaadi=CHEM&bolum=CHEMISTRY")
-url_list.append("&kisaadi=CE&bolum=CIVIL+ENGINEERING")
-url_list.append("&kisaadi=COGS&bolum=COGNITIVE+SCIENCE")
-url_list.append("&kisaadi=CSE&bolum=COMPUTATIONAL+SCIENCE+%26+ENGINEERING")
-url_list.append("&kisaadi=CET&bolum=COMPUTER+EDUCATION+%26+EDUCATIONAL+TECHNOLOGY")
-url_list.append("&kisaadi=CMPE&bolum=COMPUTER+ENGINEERING")
-url_list.append("&kisaadi=INT&bolum=CONFERENCE+INTERPRETING")
-url_list.append("&kisaadi=CEM&bolum=CONSTRUCTION+ENGINEERING+AND+MANAGEMENT")
-url_list.append("&kisaadi=CCS&bolum=CRITICAL+AND+CULTURAL+STUDIES")
-url_list.append("&kisaadi=EQE&bolum=EARTHQUAKE+ENGINEERING")
-url_list.append("&kisaadi=EC&bolum=ECONOMICS")
-url_list.append("&kisaadi=EF&bolum=ECONOMICS+AND+FINANCE")
-url_list.append("&kisaadi=ED&bolum=EDUCATIONAL+SCIENCES")
-url_list.append("&kisaadi=CET&bolum=EDUCATIONAL+TECHNOLOGY")
-url_list.append("&kisaadi=EE&bolum=ELECTRICAL+%26+ELECTRONICS+ENGINEERING")
-url_list.append("&kisaadi=ETM&bolum=ENGINEERING+AND+TECHNOLOGY+MANAGEMENT")
-url_list.append("&kisaadi=ENV&bolum=ENVIRONMENTAL+SCIENCES")
-url_list.append("&kisaadi=ENVT&bolum=ENVIRONMENTAL+TECHNOLOGY")
-url_list.append("&kisaadi=XMBA&bolum=EXECUTIVE+MBA")
-url_list.append("&kisaadi=FE&bolum=FINANCIAL+ENGINEERING")
-url_list.append("&kisaadi=PA&bolum=FINE+ARTS")
-url_list.append("&kisaadi=FLED&bolum=FOREIGN+LANGUAGE+EDUCATION")
-url_list.append("&kisaadi=GED&bolum=GEODESY")
-url_list.append("&kisaadi=GPH&bolum=GEOPHYSICS")
-url_list.append("&kisaadi=GUID&bolum=GUIDANCE+%26+PSYCHOLOGICAL+COUNSELING")
-url_list.append("&kisaadi=HIST&bolum=HISTORY")
-url_list.append("&kisaadi=HUM&bolum=HUMANITIES+COURSES+COORDINATOR")
-url_list.append("&kisaadi=IE&bolum=INDUSTRIAL+ENGINEERING")
-url_list.append("&kisaadi=INCT&bolum=INTERNATIONAL+COMPETITION+AND+TRADE")
-url_list.append("&kisaadi=MIR&bolum=INTERNATIONAL+RELATIONS%3aTURKEY%2cEUROPE+AND+THE+MIDDLE+EAST")
-url_list.append("&kisaadi=MIR&bolum=INTERNATIONAL+RELATIONS%3aTURKEY%2cEUROPE+AND+THE+MIDDLE+EAST+WITH+THESIS")
-url_list.append("&kisaadi=INTT&bolum=INTERNATIONAL+TRADE")
-url_list.append("&kisaadi=INTT&bolum=INTERNATIONAL+TRADE+MANAGEMENT")
-url_list.append("&kisaadi=LS&bolum=LEARNING+SCIENCES")
-url_list.append("&kisaadi=LING&bolum=LINGUISTICS")
-url_list.append("&kisaadi=AD&bolum=MANAGEMENT")
-url_list.append("&kisaadi=MIS&bolum=MANAGEMENT+INFORMATION+SYSTEMS")
-url_list.append("&kisaadi=MATH&bolum=MATHEMATICS")
-url_list.append("&kisaadi=SCED&bolum=MATHEMATICS+AND+SCIENCE+EDUCATION")
-url_list.append("&kisaadi=ME&bolum=MECHANICAL+ENGINEERING")
-url_list.append("&kisaadi=MECA&bolum=MECHATRONICS+ENGINEERING")
-url_list.append("&kisaadi=BIO&bolum=MOLECULAR+BIOLOGY+%26+GENETICS")
-url_list.append("&kisaadi=PHIL&bolum=PHILOSOPHY")
-url_list.append("&kisaadi=PE&bolum=PHYSICAL+EDUCATION")
-url_list.append("&kisaadi=PHYS&bolum=PHYSICS")
-url_list.append("&kisaadi=POLS&bolum=POLITICAL+SCIENCE%26INTERNATIONAL+RELATIONS")
-url_list.append("&kisaadi=PRED&bolum=PRIMARY+EDUCATION")
-url_list.append("&kisaadi=PSY&bolum=PSYCHOLOGY")
-url_list.append("&kisaadi=YADYOK&bolum=SCHOOL+OF+FOREIGN+LANGUAGES")
-url_list.append("&kisaadi=SCED&bolum=SECONDARY+SCHOOL+SCIENCE+AND+MATHEMATICS+EDUCATION")
-url_list.append("&kisaadi=SPL&bolum=SOCIAL+POLICY+WITH+THESIS")
-url_list.append("&kisaadi=SOC&bolum=SOCIOLOGY")
-url_list.append("&kisaadi=SWE&bolum=SOFTWARE+ENGINEERING")
-url_list.append("&kisaadi=SWE&bolum=SOFTWARE+ENGINEERING+WITH+THESIS")
-url_list.append("&kisaadi=TRM&bolum=SUSTAINABLE+TOURISM+MANAGEMENT")
-url_list.append("&kisaadi=SCO&bolum=SYSTEMS+%26+CONTROL+ENGINEERING")
-url_list.append("&kisaadi=TRM&bolum=TOURISM+ADMINISTRATION")
-url_list.append("&kisaadi=WTR&bolum=TRANSLATION")
-url_list.append("&kisaadi=TR&bolum=TRANSLATION+AND+INTERPRETING+STUDIES")
-url_list.append("&kisaadi=TK&bolum=TURKISH+COURSES+COORDINATOR")
-url_list.append("&kisaadi=TKL&bolum=TURKISH+LANGUAGE+%26+LITERATURE")
-url_list.append("&kisaadi=LL&bolum=WESTERN+LANGUAGES+%26+LITERATURES")
+
 my_dict = {}
 my_dict_instr = {}
 
@@ -99,33 +25,6 @@ my_dict_instr = {}
 for dep in department_list:
     my_dict[dep]=set()
     my_dict_instr[dep]=set()
-    
-starting_year = 2018
-starting_term = "Spring"
-finishing_year = 2018
-finishing_term = "Fall"
-
-#Starting index is calculated by simple calculations
-#This index will determine the range of semester    
-starting_index = (starting_year -1999)*3
-
-if starting_term == "Spring" :
-    starting_index +=1
-elif starting_term == "Summer" :
-    starting_index +=2
-elif starting_term == "Fall" :
-    starting_index +=3
-    
-#finishing index is calculated by simple calculations
-#This index will determine the range of semester    
-finishing_index = (finishing_year -1999)*3
-
-if finishing_term == "Spring" :
-    finishing_index +=1
-elif finishing_term == "Summer" :
-    finishing_index +=2
-elif finishing_term == "Fall" :
-    finishing_index +=3
 
 #Dictionaries to make a pandas table
 dict_total_offering={}
